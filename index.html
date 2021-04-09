@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<script language="JavaScript">
+    function showInput() {
+        document.getElementById('display').innerHTML =
+            document.getElementById("user_input").value;
+    }
+</script>
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Personal Bootstrap Template</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- =======================================================
+  * Template Name: Personal - v4.1.0
+  * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header">
+        <div class="container">
+            <h1><a href="index.html">Welcome to your daily routine planner!</a></h1>
+
+            <br><br>
+            <h2>
+                <a>"Anxiety is the top presenting concern among college students with 41.6 percent according to the American Psychological Association" </a>
+                <br>
+                <br>
+                <br>
+                <a>” The pandemic brought the education to a largest “online movement”, most of the school work has to be done virtually. Understanding the difficulty of digital learning, we are here to help you work online effectively, as well as remain
+                    in good mental health.”
+                </a>
+            </h2>
+
+
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
+
+
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link active" href="#header">Home</a></li>
+                    <li><a class="nav-link" href="#about">Calendar</a></li>
+                    <li><a class="nav-link" href="#resume">Notes</a></li>
+                    <li><a class="nav-link" href="#services">Notifications</a></li>
+                    <li><a class="nav-link" href="#portfolio">Suggestions</a></li>
+                    <li><a class="nav-link" href="#contact">Account</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+            <!-- .navbar -->
+
+            <div class="social-links">
+                <a href="https://twitter.com/login?lang=en-gb" class="twitter"><i class="bi bi-twitter"></i></a>
+                <a href="https://www.facebook.com/login/web/" class="facebook"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/accounts/login/" class="instagram"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.linkedin.com/login?fromSignIn=true&trk=guest_homepage-basic_nav-header-signin" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            </div>
+
+        </div>
+
+
+    </header>
+
+    <!-- End Header -->
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+
+        <!-- ======= About Me ======= -->
+        <div class="about-me container">
+
+            <div class="section-title">
+                <h2>Calendar</h2>
+                <p>Today's To-Do List</p>
+            </div>
+            <style>
+                /* Include the padding and border in an element's total width and height */
+                
+                * {
+                    box-sizing: border-box;
+                }
+                /* Remove margins and padding from the list */
+                
+                ul {
+                    margin: 0;
+                    padding: 0;
+                }
+                /* Style the list items */
+                
+                ul li {
+                    cursor: pointer;
+                    position: relative;
+                    padding: 12px 8px 12px 40px;
+                    list-style-type: none;
+                    font-size: 18px;
+                    transition: 0.2s;
+                    /* make the list items unselectable */
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                }
+                /* Set all odd list items to a different color (zebra-stripes) */
+                
+                ul li:nth-child(odd) {}
+                /* Darker background-color on hover */
+                
+                ul li:hover {}
+                /* When clicked on, add a background color and strike out text */
+                
+                ul li.checked {
+                    background: #888;
+                    text-decoration: line-through;
+                }
+                /* Add a "checked" mark when clicked on */
+                
+                ul li.checked::before {
+                    content: '';
+                    position: absolute;
+                    border-color: #fff;
+                    border-style: solid;
+                    border-width: 0 2px 2px 0;
+                    top: 10px;
+                    left: 16px;
+                    transform: rotate(45deg);
+                    height: 15px;
+                    width: 7px;
+                }
+                /* Style the close button */
+                
+                .close {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    padding: 12px 16px 12px 16px;
+                }
+                
+                .close:hover {
+                    background-color: #f44336;
+                    color: white;
+                }
+                /* Style the header */
+                
+                .header {
+                    background-color: #18d26e;
+                    padding: 30px 40px;
+                    color: white;
+                    text-align: center;
+                }
+                /* Clear floats after the header */
+                
+                .header:after {
+                    content: "";
+                    display: table;
+                    clear: both;
+                }
+                /* Style the input */
+                
+                input {
+                    margin: 0;
+                    border: none;
+                    border-radius: 0;
+                    width: 75%;
+                    padding: 10px;
+                    float: left;
+                    font-size: 16px;
+                }
+                /* Style the "Add" button */
+                
+                .addBtn {
+                    padding: 10px;
+                    width: 25%;
+                    background: #d9d9d9;
+                    color: #555;
+                    float: left;
+                    text-align: center;
+                    font-size: 16px;
+                    cursor: pointer;
+                    transition: 0.3s;
+                    border-radius: 0;
+                }
+                
+                .addBtn:hover {
+                    background-color: #bbb;
+                }
+            </style>
+            </head>
+
+            <body>
+
+                <div id="myDIV" class="header">
+                    <h2 style="margin:5px">My To Do List</h2>
+                    <input type="text" id="myInput" placeholder="Title...">
+                    <span onclick="newElement()" class="addBtn">Add</span>
+                </div>
+
+                <ul id="myUL" class="ULL">
+
+
+                </ul>
+
+                <script>
+                    // Create a "close" button and append it to each list item
+                    var myNodelist = document.getElementsByClassName("ULL");
+                    var i;
+                    for (i = 0; i < myNodelist.length; i++) {
+                        var span = document.createElement("SPAN");
+                        var txt = document.createTextNode("\u00D7");
+                        span.className = "close";
+                        span.appendChild(txt);
+                        myNodelist[i].appendChild(span);
+                    }
+
+                    // Click on a close button to hide the current list item
+                    var close = document.getElementsByClassName("close");
+                    var i;
+                    for (i = 0; i < close.length; i++) {
+                        close[i].onclick = function() {
+                            var div = this.parentElement;
+                            div.style.display = "none";
+                        }
+                    }
+
+                    // Add a "checked" symbol when clicking on a list item
+                    var list = document.getElementsByClassName('ULL');
+                    list.addEventListener('click', function(ev) {
+                        if (ev.target.tagName === 'LI') {
+                            ev.target.classList.toggle('checked');
+                        }
+                    }, false);
+
+                    // Create a new list item when clicking on the "Add" button
+                    function newElement() {
+                        var li = document.createElement("li");
+                        var inputValue = document.getElementById("myInput").value;
+                        var t = document.createTextNode(inputValue);
+                        li.appendChild(t);
+                        if (inputValue === '') {
+                            alert("You must write something!");
+                        } else {
+                            document.getElementById("myUL").appendChild(li);
+                        }
+                        document.getElementById("myInput").value = "";
+
+                        var span = document.createElement("SPAN");
+                        var txt = document.createTextNode("\u00D7");
+                        span.className = "close";
+                        span.appendChild(txt);
+                        li.appendChild(span);
+
+                        for (i = 0; i < close.length; i++) {
+                            close[i].onclick = function() {
+                                var div = this.parentElement;
+                                div.style.display = "none";
+                            }
+                        }
+                    }
+                </script>
+
+
+                <br>
+                <BR>
+                <BR>
+
+
+                <div class="month">
+                    <ul>
+                        <li class="prev">&#10094;</li>
+                        <li class="next">&#10095;</li>
+                        <li>
+                            April<br>
+                            <span style="font-size:18px">2021</span>
+                        </li>
+                    </ul>
+                </div>
+
+
+
+                <ul class="weekdays">
+                    <li>Mo</li>
+                    <li>Tu</li>
+                    <li>We</li>
+                    <li>Th</li>
+                    <li>Fr</li>
+                    <li>Sa</li>
+                    <li>Su</li>
+                </ul>
+
+                <ul class="days">
+                    <li> </li>
+                    <li> </li>
+                    <li> </li>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li>7</li>
+                    <li>8</li>
+                    <li><span class="active">9</span></li>
+                    <li>10</li>
+
+                    <li>11</li>
+                    <li>12</li>
+                    <li>13</li>
+                    <li>14</li>
+                    <li>15</li>
+                    <li>16</li>
+                    <li>17</li>
+                    <li>18</li>
+                    <li>19</li>
+                    <li>20</li>
+                    <li>21</li>
+                    <li>22</li>
+                    <li>23</li>
+                    <li>24</li>
+                    <li>25</li>
+                    <li>26</li>
+                    <li>27</li>
+                    <li>28</li>
+                    <li>29</li>
+                    <li>30</li>
+                </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- End About Me -->
+
+
+                <!-- ======= Counts ======= -->
+                <div class="counts container">
+
+                    <div class="row">
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="count-box">
+                                <i class="bi bi-paperclip"></i>
+                                <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1" class="purecounter"></span>
+                                <p>Assignments</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+                            <div class="count-box">
+                                <i class="bi bi-journal-richtext"></i>
+                                <span data-purecounter-start="0" data-purecounter-end="1" data-purecounter-duration="1" class="purecounter"></span>
+                                <p>Projects</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+                            <div class="count-box">
+                                <i class="bi bi-headset"></i>
+                                <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1" class="purecounter"></span>
+                                <p>Meetings</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+                            <div class="count-box">
+                                <i class="bi bi-pen"></i>
+                                <span data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="1" class="purecounter"></span>
+                                <p>Exams</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- End Counts -->
+
+
+
+                <!-- ======= motivational ======= -->
+                <div class="testimonials container">
+
+                    <div class="section-title">
+                        <h2>Inspirational Quotes</h2>
+                    </div>
+
+                    <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <div class="testimonial-item">
+                                    <p>
+                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i> Successful and unsuccessful people do not vary greatly in their abilities. They vary in their desires to reach their potential.
+                                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                    </p>
+                                    <h3>John Maxwell </h3>
+
+                                </div>
+                            </div>
+                            <!-- End testimonial item -->
+
+                            <div class="swiper-slide">
+                                <div class="testimonial-item">
+                                    <p>
+                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i> You don’t have to be great to start, but you have to start to be great.
+                                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                    </p>
+                                    <h3>Anonymous</h3>
+
+                                </div>
+                            </div>
+                            <!-- End testimonial item -->
+
+                            <div class="swiper-slide">
+                                <div class="testimonial-item">
+                                    <p>
+                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i> Don’t say you don’t have enough time. You have exactly the same number of hours per day that were given to Helen Keller, Pasteur, Michelangelo, Mother Teresea,
+                                        Leonardo da Vinci, Thomas Jefferson, and Albert Einstein.
+                                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                    </p>
+
+                                    <h3>H. Jackson Brown Jr.</h3>
+                                </div>
+                            </div>
+                            <!-- End testimonial item -->
+
+                            <div class="swiper-slide">
+                                <div class="testimonial-item">
+                                    <p>
+                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i> Don’t Let Yesterday Take Up Too Much Of Today.
+                                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                    </p>
+                                    <h3>Will Rogers</h3>
+
+
+
+                                </div>
+
+                            </div>
+                            <!-- End testimonial item -->
+
+                            <div class="swiper-slide">
+                                <div class="testimonial-item">
+                                    <p>
+                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i> I’ve failed over and over and over again in my life. And that is why I succeed
+                                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                    </p>
+
+                                    <h3>Michael Jordan</h3>
+
+                                </div>
+                            </div>
+                            <!-- End testimonial item -->
+
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+
+                    <div class="owl-carousel testimonials-carousel">
+
+                    </div>
+
+                </div>
+                <!-- End Testimonials  -->
+
+    </section>
+    <!-- End About Section -->
+
+
+
+
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="resume">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Notes</h2>
+                <p>Record your notes here</p>
+            </div>
+
+            <div class="row">
+
+                <h2 class="resume-title">General Daily Notes</h2>
+
+
+                <form action="forms/contact.php" method="post" role="form" class="php-email-form mt-4">
+                    <div class="row">
+
+                        <div class="form-group mt-3">
+                            <textarea class="form-control" name="message" rows="5" placeholder="Type general daily notes here..." required></textarea>
+                        </div>
+
+
+                </form>
+
+
+                </div>
+
+
+                <h2 class="resume-title">Mental Diary</h2>
+
+
+                <form action="forms/contact.php" method="post" role="form" class="php-email-form mt-4">
+                    <div class="row">
+
+                        <div class="form-group mt-3">
+                            <textarea class="form-control" name="message" rows="5" placeholder="Type mental diary here..." required></textarea>
+                        </div>
+
+
+                </form>
+
+                </div>
+
+                <br><br>
+                <h2 class="resume-title">Health Diary</h2>
+
+                <form action="forms/contact.php" method="post" role="form" class="php-email-form mt-4">
+                    <div class="row">
+
+                        <div class="form-group mt-3">
+                            <textarea class="form-control" name="message" rows="5" placeholder="Type health diary notes here..." required></textarea>
+                        </div>
+
+
+                </form>
+
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+
+        </div>
+    </section>
+    <!-- End Resume Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Notifications</h2>
+                <p>My notifications</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bxs-time "></i></div>
+                        <h4><a href="">Eye Strain</a></h4>
+                        <p>Remember to look away from your screen from time to time. We have set up a reminder every 20 mins for you.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bxs-up-arrow"></i></div>
+                        <h4><a href="">Exercise</a></h4>
+                        <p>Make sure you take the time to get out of that chair and exercise! Every hour we'll take the time to remind you</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bx-tv"></i></div>
+                        <h4><a href="">Recharge</a></h4>
+                        <p>Sometimes you just have to get up and stretch. Also don't forget to have your three meals a day to recharge! If we see you've been here for quite a while we'll let you know. ;)</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bx-notepad"></i></div>
+                        <h4><a href="">Tell us how you're feeling</a></h4>
+                        <p>We'll remind you to keep updating your journals on the notes section on how you're feeling throughout a study session</p>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+    <!-- End Services Section -->
+
+
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+
+            <div class="section-title">
+
+                <p>Suggestions</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12 d-flex justify-content-center">
+                    <ul id="portfolio-flters">
+                        <li data-filter="*" class="filter-active">All</li>
+                        <li data-filter=".filter-app">Mental Health</li>
+                        <li data-filter=".filter-card">Education</li>
+                        <li data-filter=".filter-web">Physical Health</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row portfolio-container">
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                    <div class="portfolio-wrap">
+                        <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Mental Health </h4>
+                            <p>Suggestion 1</p>
+                            <div class="portfolio-links">
+                                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                                <a href="portfolio-details-1.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                    <div class="portfolio-wrap">
+                        <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Mental Health</h4>
+                            <p>Suggestion 2</p>
+                            <div class="portfolio-links">
+                                <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
+                                <a href="portfolio-details-2.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                    <div class="portfolio-wrap">
+                        <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Education</h4>
+                            <p>Suggestion 1</p>
+                            <div class="portfolio-links">
+                                <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
+                                <a href="portfolio-details-3.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                    <div class="portfolio-wrap">
+                        <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Education</h4>
+                            <p>Sugesstion 2</p>
+                            <div class="portfolio-links">
+                                <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
+                                <a href="portfolio-details-4.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                    <div class="portfolio-wrap">
+                        <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Physical Health</h4>
+                            <p>Suggestion 1</p>
+                            <div class="portfolio-links">
+                                <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 1"><i class="bx bx-plus"></i></a>
+                                <a href="portfolio-details-5.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                    <div class="portfolio-wrap">
+                        <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Physical Health</h4>
+                            <p>Suggestion 2</p>
+                            <div class="portfolio-links">
+                                <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
+                                <a href="portfolio-details-6.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+    </section>
+    <!-- End Portfolio Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+        <div class="container">
+
+            <div class="section-title">
+                <h2></h2>
+                <p>Login</p>
+            </div>
+
+            <div class="row mt-2">
+
+
+
+                <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
+                    <div class="info-box">
+                        <i class="bx bx-share-alt"></i>
+                        <h3>Social Profiles</h3>
+                        <div class="social-links">
+                            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
+                            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <div class="container" id="signin">
+                <h2>Sign in</h2>
+                <form method="post" action="index.html" class="php-email-form mt-4">
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="col-md-6 form-group mt-3 mt-md-0">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group mt-3">
+                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Password" required>
+                        </div>
+
+                        <div class="my-3">
+
+                        </div>
+                        <div class="text-center"><button type="submit" name="commit" value="Login">Login</button></div>
+
+
+                        <br />
+
+
+                    </div>
+                </form>
+            </div>
+
+
+        </div>
+    </section>
+    <!-- End Contact Section -->
+
+    <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/personal-free-resume-bootstrap-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade
+    </div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/purecounter/purecounter.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+<!-- Resources from <a href=https://www.w3schools.com/>-->
+
+    </body>
+
+</html>
